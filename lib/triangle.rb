@@ -6,15 +6,14 @@ class Triangle
   end
 
   def kind
-    if @side_1 == @side_2
-      if @side_2 == @side_3
-        return :equilateral
-      else
+    if side_1 == side_2 && side_2 == side_3
+      return :equilateral
+    elsif side_1 == side_2 || side_1 == side_3 || side_2 == side_3
         return :isosceles
+      else
+        return :scalene
       end
-    else
-      return :scalene
-    end
+        
   end
 end
 
